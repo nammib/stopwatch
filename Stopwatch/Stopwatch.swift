@@ -33,7 +33,7 @@ class Stopwatch {
     }
     func getElapsedTime()-> String? {
         elapsedTime = startDate?.timeIntervalSinceNow ?? 0
-        minutes = -elapsedTime/100;
+        minutes = -elapsedTime/60;
         seconds = -elapsedTime.truncatingRemainder(dividingBy: 60);
         milli = -(elapsedTime*100).truncatingRemainder(dividingBy: 100)
         let time = String(format: "%02d:%02d.%d", Int(minutes), Int(seconds), Int(milli))
